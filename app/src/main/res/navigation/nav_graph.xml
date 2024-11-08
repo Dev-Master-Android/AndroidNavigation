@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.androidnavigation.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_redFragment"
+            app:destination="@id/redFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_yellowFragment"
+            app:destination="@id/yellowFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_greenFragment"
+            app:destination="@id/greenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.androidnavigation.RedFragment"
+        android:label="Red Fragment"
+        tools:layout="@layout/fragment_red" />
+
+    <fragment
+        android:id="@+id/yellowFragment"
+        android:name="com.example.androidnavigation.YellowFragment"
+        android:label="Yellow Fragment"
+        tools:layout="@layout/fragment_yellow" />
+
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.example.androidnavigation.GreenFragment"
+        android:label="Green Fragment"
+        tools:layout="@layout/fragment_green" />
+</navigation>
